@@ -1,0 +1,18 @@
+.periodFlex{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5em;
+}
+.period{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    padding: 1em;
+    font-size: 13px;
+}
+.value{
+    font-weight: 800;
+    font-size: 16px;
+}

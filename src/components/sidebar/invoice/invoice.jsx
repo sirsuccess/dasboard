@@ -4,9 +4,9 @@ import './invoice.css';
 
 function Invoice() {
   return (
-    <div className="invoice">
+    <button className="invoice">
       GENERATE INVOICE
-    </div>
+    </button>
   );
 }
 

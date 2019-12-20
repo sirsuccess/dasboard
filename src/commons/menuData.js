@@ -33,17 +33,17 @@ export default {
       {
         title: 'All Orders',
         link: '/',
-        icon: './assets/icons/dashboard.svg',
+        icon: './assets/icons/note.svg',
       },
       {
         title: 'Pending Orders',
         link: '/',
-        icon: './assets/icons/dashboard.svg',
+        icon: './assets/icons/note.svg',
       },
       {
         title: 'Reconciled Orders',
         link: '/',
-        icon: './assets/icons/dashboard.svg',
+        icon: './assets/icons/note.svg',
       },
       
     ],

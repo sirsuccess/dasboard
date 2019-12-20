@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from "./components/navbar/navbar"
 import Sidebar from "./components/sidebar/sidebar"
+import DashboardBody from "./components/dashboardBody/dashboardBody"
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Navbar />
       <div className="dashboardBody">
         <div className ="dashboadLeft"><Sidebar /></div>
-        <div className ="dashboadRight">Body</div>
+        <div className ="dashboadRight"><DashboardBody/></div>
       </div>
       
       
