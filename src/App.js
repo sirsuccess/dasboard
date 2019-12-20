@@ -1,19 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/navbar/navbar"
+import Sidebar from "./components/sidebar/sidebar"
 
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-          VELA DASHBOARD
-        
-      </header>
+      <div className="dashboardBody">
+        <div className ="dashboadLeft"><Sidebar /></div>
+        <div className ="dashboadRight">Body</div>
+      </div>
+      
+      
     </div>
   );
 }
