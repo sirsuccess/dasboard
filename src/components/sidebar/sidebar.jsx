@@ -19,7 +19,7 @@ function Sidebar() {
             <img
               src={item.icon}
               alt="icon"
-              style={{ width: 30, marginRight: "2em" }}
+              style={{ width: 25, marginRight: "2em" }}
             />
             {item.title}
           </li>

@@ -1,0 +1,16 @@
+.ChartSection{
+ display: flex;
+ justify-content: space-evenly;
+ margin: 1em 0;
+
+}
+
+.chart2{
+    background-color: #fff;
+    width: 48%;
+    height: 300px;
+}
+
+.progress{
+    width: 48%;
+}
