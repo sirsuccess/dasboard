@@ -51,7 +51,7 @@ export default {
         {
             title: 'Marchant Profile',
             link: '/',
-            icon: './assets/icons/users.svg',
+            icon: './assets/icons/user.svg',
           },
     ],
   };

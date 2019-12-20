@@ -1,0 +1,33 @@
+.sidebar {
+    color: #647787;
+    /* padding: 4em; */
+    padding-top: 2em;
+}
+
+.menuItem {
+    text-align: left;
+    /* margin: 1em 0; */
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-left: 3em;
+}
+
+li {
+    padding: 0.2em 0;
+    display: flex;
+    align-items: center;
+    color: #647787;
+    text-decoration: none;
+    /* margin-bottom: 1em; */
+    text-decoration: none;
+    padding-left: 4em;
+    font-size: 12px;
+}
+
+.active {
+    color: #0000;
+    text-decoration: none;
+    background-color: rgb(203, 224, 250);
+    /* border-left: 4px solid #1875F0; */
+    /* opacity: 0.1; */
+}
