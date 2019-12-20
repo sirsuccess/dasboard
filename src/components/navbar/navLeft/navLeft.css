@@ -1,6 +1,6 @@
 .navRight{
 display: flex;
-align-items: center;
+align-items: flex-end;
 }
 .brand{
     color: #1875F0;
@@ -10,5 +10,8 @@ margin-right: 3em;
 }
 input{
     border: none;
-    padding: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    
 }

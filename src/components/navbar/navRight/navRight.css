@@ -1,0 +1,30 @@
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+}
+.profileLI{
+font-size: 12px;
+}
+.profileLI img{
+    border-radius: 50%;
+}
+.hello{
+    margin-bottom: -1.5em;
+}
+.Bell{
+    position: absolute;
+}
+.dot{
+    background-color: #1875F0;
+    position: relative;
+    top: -5px;
+    right: -15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+}
