@@ -4,8 +4,7 @@ import periodData from "../../../commons/periodData";
 import "./periodLayout.css";
 
 function PeriodLayout() {
-
-    const MapData = data => {
+  const MapData = data => {
     return data.map((item, index) => {
       return (
         <div className="period" key={index}>
@@ -23,11 +22,8 @@ function PeriodLayout() {
         </div>
       );
     });
-  }
-  return (
-      <div className="periodFlex">{MapData(periodData.Data)}</div>
-    
-  );
+  };
+  return <div className="periodFlex">{MapData(periodData.Data)}</div>;
 }
 
 export default PeriodLayout;

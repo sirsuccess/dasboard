@@ -11,44 +11,53 @@ import TableRow from '@material-ui/core/TableRow';
 import TableData from "../../commons/transactionData"
 
 const columns = [
-  { id: 'item', label: 'Item', minWidth: 170 },
-  { id: 'price', label: 'price', minWidth: 100 },
+  { id: 'item', label: 'Item Type', minWidth: 180 },
+  { id: 'price', label: 'Price', minWidth: 70, format: value => value.toFixed(2)},
   {
     id: 'transactionNo',
-    label: 'TransactionNo',
-    minWidth: 170,
+    label: 'Transaction No',
+    minWidth: 100,
     align: 'right',
     format: value => value.toLocaleString(),
   },
   {
     id: 'time',
     label: 'Time',
-    minWidth: 170,
+    minWidth: 70,
     align: 'right',
     format: value => value.toLocaleString(),
   },
   {
     id: 'status',
-    label: 'status',
-    minWidth: 170,
+    label: 'Status',
+    minWidth: 70,
+    align: 'right',
+    format: value => value.toFixed(2),
+  },
+  {
+    id: 'dropdown',
+    label: '',
+    minWidth: 10,
     align: 'right',
     format: value => value.toFixed(2),
   },
 ];
 
-function createData(item, price, transactionNo, time, status) {
+function createData(item, price, transactionNo, time, status, dropdown) {
   
-  return { item, price, transactionNo, time, status };
+  return { item, price, transactionNo, time, status,dropdown };
 }
-
+const blackCircle = "Vw"
+const dropdownArr = <img src="./assets/icons/arrow-down.svg" alt="Bell icon" className="dropdownArr" style={{width:20, }}></img>
 const rows = TableData.Payments.map((dataItem, idex)=>{
+    
   return (
     
-    createData(dataItem.item,
+    createData(`${blackCircle} ${dataItem.item}`,
     dataItem.price,
     dataItem.transactionNo,
     dataItem.time,
-    dataItem.status)
+    dataItem.status,dropdownArr)
     
   );
   
@@ -81,8 +90,17 @@ export default function StickyHeadTable() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table stickyHeader aria-label="table">
           <TableHead>
+          <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onChangePage={handleChangePage}
+        onChangeRowsPerPage={handleChangeRowsPerPage}
+      />
             <TableRow>
               {columns.map(column => (
                 <TableCell
