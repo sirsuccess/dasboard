@@ -9,9 +9,10 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import TableData from "../../commons/transactionData"
+import Button from "../../commons/buttons"
 
 const columns = [
-  { id: 'item', label: 'Item Type', minWidth: 180 },
+  { id: 'item', label: 'Item Type', minWidth: 70 },
   { id: 'price', label: 'Price', minWidth: 70, format: value => value.toFixed(2)},
   {
     id: 'transactionNo',
@@ -29,7 +30,7 @@ const columns = [
   },
   {
     id: 'status',
-    label: 'Status',
+    label: '',
     minWidth: 70,
     align: 'right',
     format: value => value.toFixed(2),
@@ -50,14 +51,21 @@ function createData(item, price, transactionNo, time, status, dropdown) {
 const blackCircle = "Vw"
 const dropdownArr = <img src="./assets/icons/arrow-down.svg" alt="Bell icon" className="dropdownArr" style={{width:20, }}></img>
 const rows = TableData.Payments.map((dataItem, idex)=>{
-    
+    let color 
+    if (dataItem.status=="Pending"){
+      color="#EBC315"
+    }else if(dataItem.status=="Reconciled"){
+      color="#27AE60"
+    }else{
+      color="#C4C4C4"
+    }
   return (
     
     createData(`${blackCircle} ${dataItem.item}`,
     dataItem.price,
     dataItem.transactionNo,
-    dataItem.time,
-    dataItem.status,dropdownArr)
+    dataItem.time,<Button color={ color} title={dataItem.status}/>,
+    dropdownArr)
     
   );
   
