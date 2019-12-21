@@ -1,21 +1,24 @@
 export default {
     Orders: [
       {
-        Pendin: 'Daily Transaction Volume',
-        value: "2,342",
-      },
+        title: "Orders",
+        Pending: "Pending Order",
+        Reconciled: "Reconciled Orders",
+        PendingValue: 20,
+        ReconciledValue: 80,
+        Total : "Total Order",
+        TotalValue : 100
+      }
+    ],
+    Payments: [
       {
-        title: 'Daily Transaction Value',
-        value: "4,000,000",
-      },
-      {
-        title: 'Total Transaction Volume',
-        value: "452,000",
-      },
-      {
-        title: 'Total Transaction Value',
-        value: "4,000,000",
-      },
-      
+        title: "Payments",
+        Pending: "Un-reconciled Payments",
+        Reconciled: "Reconciled Payments",
+        PendingValue: 20,
+        ReconciledValue: 80,
+        Total : "Total Payment",
+        TotalValue : 100
+      }
     ],
   };

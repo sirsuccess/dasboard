@@ -12,4 +12,5 @@
     justify-content: space-around;
     align-items: center;
     width: 110px;
+    cursor: pointer;
 }
