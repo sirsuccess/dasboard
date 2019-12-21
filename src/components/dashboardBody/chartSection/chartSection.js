@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressBar from  "../../../commons/progressBar"
+import ProgressCard from "./progressCard/progressCard"
 import './chartSection.css';
 
 function ChartSection() {
@@ -9,7 +10,7 @@ function ChartSection() {
 
     </div>
     <div className="progress">
-    <ProgressBar/>
+    <ProgressCard/>
     </div>
     
     

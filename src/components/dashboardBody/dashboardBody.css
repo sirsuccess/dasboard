@@ -3,3 +3,14 @@
     margin: 0 auto;
     margin-bottom: 3em;
 }
+.btnDot{
+    background-color: transparent;
+    border: 1px solid #C4C4C4;
+    border-radius: 30px;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 110px;
+    cursor: pointer;
+}
