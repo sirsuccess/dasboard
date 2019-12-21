@@ -4,9 +4,6 @@ import React from 'react';
 const ProgressLine = (props) => {
   return (
     <div>
-     {/* <div class="w3-yellow w3-round-xlarge">
-    <div class="w3-container w3-blue w3-round-xlarge" style={{width:"25%"}}>25%</div>
-  </div> */}
     </div>
   );
 };
