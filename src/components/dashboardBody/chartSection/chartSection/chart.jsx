@@ -1,64 +1,64 @@
-import React, { Component } from 'react';
-import ChartData from "../../../../commons/chartData"
+import React, { Component } from "react";
+import ChartData from "../../../../commons/chartData";
+
 // Import fusioncharts.js files from fusioncharts module
-import FusionCharts from 'fusioncharts';
+import FusionCharts from "fusioncharts";
 // Import the timeseries file from fusioncharts module
-import TimeSeries from 'fusioncharts/fusioncharts.timeseries';
+import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 // Import ReactFusioncharts from react-fusioncharts module
 // import ReactFC from 'react-fusioncharts';
-import ReactFC from 'react-fusioncharts';
-
+import ReactFC from "react-fusioncharts";
 
 // Add core FusionCharts module and TimeSeries module as dependecies in react-fusioncharts
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
 
-const jsonify = res => res.json();
 // This is the remote url to fetch the data.
-const dataFetch = ChartData
-// fetch(
-//     "https://s3.eu-central-1.amazonaws.com/fusion.store/ft/data/line-chart-with-time-axis-data.json"
-// ).then(jsonify);
-// This is the remote url to fetch the schema.
-const schemaFetch = [{
-    "name": "Time",
-    "type": "date",
-    "format": "%d-%b-%y"
-  }, {
-    "name": ".",
-    "type": "number"
-  }]
-
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-console.log(mm);
-
-var yyyy = today.getFullYear();
-if (dd < 10) {
-  dd = '0' + dd;
-} 
-if (mm < 10) {
-  mm = '0' + mm;
-} 
-var today = dd + '/' + mm + '/' + yyyy;
-
+const dataFetch = ChartData;
  
-class SimpleTimeseries extends Component {
+ let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; //January is 0!
+        console.log(mm);
+        
+        const yyyy = today.getFullYear();
+        if (dd < 10) {
+          dd = "0" + dd;
+        }
+        if (mm < 10) {
+          mm = "0" + mm;
+        }
+        today = dd + "-" + mm + "-" + yyyy;
+ 
+// This is the remote url to fetch the schema.
+const schemaFetch = [
+  {
+    name: "Time",
+    type: "date",
+    format: "%d-%b-%y"
+  },
+  {
+    name: ".",
+    type: "number"
+  }
+];
+
+
+class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {
       // Here timeseriesDs is the configuration object which we will pass as a prop to our ReactFC component.
       timeseriesDs: {
-        type: 'timeseries',
-        renderAt: 'container',
-        width: '100%',
-        height: '300',
+        type: "timeseries",
+        renderAt: "container",
+        width: "100%",
+        height: "350",
         backgroundColor: "red",
         dataSource: {
-        //   caption: { text: 'Online Sales of a SuperStore in the US' },
+          //   caption: { text: 'Online Sales of a SuperStore in the US' },
           // Initially data is set as null
-          data: null,
+          data: null
         }
       }
     };
@@ -94,11 +94,11 @@ class SimpleTimeseries extends Component {
   render() {
     return (
       <div className="App">
-          Today: {today}
+        Today: {today}
         <ReactFC {...this.state.timeseriesDs} />
       </div>
     );
   }
 }
 
-export default SimpleTimeseries;
+export default Chart;

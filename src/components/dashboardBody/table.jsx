@@ -67,9 +67,9 @@ const dropdownArr = (
  */
 const rows = TableData.Payments.map((dataItem, idex) => {
   let color;
-  if (dataItem.status == "Pending") {
+  if (dataItem.status === "Pending") {
     color = "#EBC315";
-  } else if (dataItem.status == "Reconciled") {
+  } else if (dataItem.status === "Reconciled") {
     color = "#27AE60";
   } else {
     color = "#C4C4C4";

@@ -1,29 +1,41 @@
-.ProgressCard{
+.ProgressCard {
 
     /* width: 100%; */
 }
-.cardLayout{
+
+.cardLayout {
     background-color: #fff;
     width: 100%;
-    height: 140px;
+    /* height: 140px; */
     padding: 1em 2em;
     box-sizing: border-box;
 }
-.cardLayout:first-child{
+
+.cardLayout:first-child {
     margin-bottom: 1em;
 }
-.cardTitle{
-font-weight: bolder;
+
+.cardTitle {
+    font-weight: bolder;
+
 }
 
-.Pending span{
+.Pending span {
     color: #FDC203;
 }
 
-.Reconciled span{
+.cardTitle,
+.ProgressBar,
+.Pending,
+.Reconciled {
+    margin-bottom: 0.8rem;
+}
+
+.Reconciled span {
     color: #27AE60;
 }
-.Total span{
+
+.Total span {
     color: #1875F0;
-  
+
 }

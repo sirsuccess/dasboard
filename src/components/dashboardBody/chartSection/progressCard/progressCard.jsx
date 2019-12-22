@@ -10,7 +10,7 @@ function ProgressCard() {
       return (
         <div className="cardLayout" key={index}>
           <div className="cardTitle">{item.title}</div>
-          <div className="ProgressBar"><ProgressLine/></div>
+          <div className="ProgressBar"><ProgressLine width={`${item.ReconciledValue}%`}/></div>
           <div className="Pending">{item.Pending} : <span>{item.PendingValue}</span></div>
           <div className="Reconciled">{item.Reconciled} : <span>{item.ReconciledValue}</span></div>
       <div className="Total">{item.Total}:  <span>{item.PendingValue+item.ReconciledValue}</span></div>
