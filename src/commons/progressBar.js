@@ -1,13 +1,10 @@
-import React from 'react';
-// import ProgressBar from 'react-bootstrap/ProgressBar'
+import React from "react";
+import "./progressBar.css"
 
-const ProgressLine = (props) => {
-  return (
-    <div>
-    </div>
-  );
+const ProgressLine = ({width}) => {
+  console.log("this is width",width);
+  
+  return <div className="outerLine"><div className="innerLine" style={{width:width}}></div></div>;
 };
-
-
 
 export default ProgressLine;

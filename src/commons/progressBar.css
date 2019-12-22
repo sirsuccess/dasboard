@@ -1,0 +1,14 @@
+.outerLine, .innerLine{
+    
+    height: 13px;
+    
+    border-radius: 20px;
+}
+.outerLine{
+    width: 80%;
+    background-color: yellow;
+}
+.innerLine{
+    background-color: green;
+    
+}
