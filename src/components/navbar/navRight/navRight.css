@@ -3,6 +3,7 @@ ul{
     align-items: center;
     justify-content: space-evenly;
     width: 500px;
+    /* display: none; */
 }
 .profileLI{
 font-size: 12px;
@@ -28,4 +29,13 @@ font-size: 12px;
     font-size: 10px;
     font-weight: 800;
     text-align: center;
+}
+li{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    ul{
+        display: none;
+    }
 }

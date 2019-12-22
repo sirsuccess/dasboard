@@ -1,5 +1,6 @@
 .ChartSection{
  display: flex;
+ flex-wrap: wrap;
  justify-content: space-evenly;
  margin: 1em 0;
 
@@ -8,9 +9,25 @@
 .chart2{
     background-color: #fff;
     width: 48%;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .progress{
     width: 48%;
+}
+
+@media screen and (max-width: 950px) {
+    .ChartSection{
+        flex-direction: column;
+    }
+    .chart2{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    .progress{
+        margin-top: 3em;
+        margin: 0 auto;
+        width: 90%;
+    }
 }

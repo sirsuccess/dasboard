@@ -1,10 +1,9 @@
 .sidebar {
     color: #647787;
     /* padding: 4em; */
-    padding-top: 2em;
-    /* background-color: #fff; */
+    padding-top: 0.5em;
+    background-color: #fff;
     position: fixed;
-    left: 0;
 }
 
 .menuItem {
@@ -25,7 +24,7 @@ li {
     text-decoration: none;
     padding-left: 4em;
     font-size: 12px;
-
+    
 }
 
 .active {
@@ -34,4 +33,10 @@ li {
     background-color: rgb(203, 224, 250);
     /* border-left: 4px solid #1875F0; */
     /* opacity: 0.1; */
+}
+
+@media screen and (max-width: 750px) {
+    .sidebar{
+        padding:0;
+    }
 }
