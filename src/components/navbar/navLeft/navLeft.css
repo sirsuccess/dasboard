@@ -1,4 +1,4 @@
-.navRight{
+.navLeft{
 display: flex;
 align-items: flex-end;
 }
@@ -6,7 +6,10 @@ align-items: flex-end;
     color: #1875F0;
     font-weight: 900;
 font-size: 24px;
-margin-right: 3em;
+
+}
+.navLeft img{
+    margin-left: 30%;
 }
 input{
     border: none;
@@ -14,9 +17,16 @@ input{
     padding-right: 0.5em;
     padding-top: 0.5em;
     
+    margin-right: 5%;
+    
 }
 
 @media screen and (max-width: 750px) {
+    .brand{
+        
+    font-size: 22px;
+    
+    }
     input{
        width: 100px;
        padding-left: 0;

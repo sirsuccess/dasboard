@@ -22,6 +22,8 @@ Link{
 
 @media screen and (max-width: 750px) {
     .navbar{
-        padding:0;
+        padding:2em;
+        margin-bottom: 5em;
+        /* background-color: red; */
     }
 }

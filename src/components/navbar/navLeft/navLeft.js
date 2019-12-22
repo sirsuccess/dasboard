@@ -4,7 +4,7 @@ import './navLeft.css';
 
 function NavRight() {
   return (
-    <div className="navRight">
+    <div className="navLeft">
       <div className="brand">
         TransMonitor
       </div>
