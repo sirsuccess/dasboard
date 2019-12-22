@@ -10,7 +10,7 @@ function DashboardBody() {
     <>
     <PeriodLayout/>
     <ChartSection/>
-    <h3>Payments</h3>
+    <h3 style={{fontSize:"36px"}}>Payments</h3>
     <div className="tableClass"><Table/></div> 
     </>
   );
