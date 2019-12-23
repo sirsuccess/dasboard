@@ -47,15 +47,18 @@ const Container = styled.div`
     left: 0;
     z-index: 0.5;
     position: absolute;
+
   }
 `;
 const ContentArea = styled.div`
   width: 100%;
   height: 100%;
   margin-top:4.5em;
+  position: relative;
   @media screen and (max-width: 750px) {
     margin-top:1.5em;
     padding: 1em;
+    
   }
 
   .top {
@@ -67,14 +70,10 @@ const Side = styled.div`
   width: 270px;
   color: #ffffff;
   padding: 2em;
-  // background: transparent linear-gradient(180deg, #2d2f48 0%, #09090e 100%) 0%
-  //   0% no-repeat padding-box;
+  
   background-color: #fff;
-  // position: fixed;
   z-index: -9;
   @media screen and (max-width: 750px) {
-  //   background: transparent linear-gradient(180deg, #2d2f48 0%, #fff 15%) 0%
-  //  0% no-repeat padding-box;
   background-color: #fff;
     position: fixed;
     left: -280px;
@@ -90,6 +89,7 @@ const Handburger = styled.div`
   flex-direction: column;
   width: 30px;
   background-color: #fff;
+  position: fixed;
   @media screen and (min-width: 751px) {
     display: none;
   }
@@ -97,7 +97,7 @@ const Handburger = styled.div`
   cursor: pointer;
   .top {
     z-index: 999999;
-    position: relative;
+    // position: relative;
   }
   .line-color {
     z-index: 999999;
@@ -106,7 +106,7 @@ const Handburger = styled.div`
   }
   .line1 {
     transform: rotate(45deg);
-    top: 4%;
+    top: 0;
     position: absolute;
     background-color: #000;
   }
@@ -116,7 +116,7 @@ const Handburger = styled.div`
   }
   .line3 {
     transform: rotate(-45deg);
-    top: 4%;
+    top: 0;
     position: absolute;
     background-color: #000;
   }

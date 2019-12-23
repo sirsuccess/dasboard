@@ -35,6 +35,9 @@ ul {
 body {
   background-color: rgb(240, 242, 247)
 }
+input{
+  outline: none;
+}
 
 @media screen and (max-width: 750px) {
   .dashboardBody {
