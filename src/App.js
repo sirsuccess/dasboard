@@ -81,6 +81,7 @@ const Side = styled.div`
     width: 200px;
     color: #fff
     z-index: 999999;
+    margin-left: -50px;
   }
 `;
 
@@ -88,6 +89,7 @@ const Handburger = styled.div`
   display: flex;
   flex-direction: column;
   width: 30px;
+  height:100%;
   background-color: #fff;
   position: fixed;
   @media screen and (min-width: 751px) {

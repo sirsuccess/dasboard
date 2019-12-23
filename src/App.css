@@ -16,10 +16,11 @@
 
 .dashboadLeft {
   width: 20%;
+  
 }
 
 .dashboadRight {
-  width: 80%;
+  width: 100%;
   background-color: rgb(240, 242, 247);
 }
 
