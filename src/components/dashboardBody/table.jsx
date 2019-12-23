@@ -10,6 +10,7 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 import TableData from "../../commons/transactionData";
 import Button from "../../commons/buttons";
+import "./table.css"
 
 const columns = [
   { id: "item", label: "Item Type", minWidth: 70 },
@@ -126,6 +127,7 @@ export default function StickyHeadTable() {
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="table">
           <TableHead>
+            <div className="headTable">
             <TablePagination
               rowsPerPageOptions={[10, 25, 100]}
               component="div"
@@ -133,11 +135,12 @@ export default function StickyHeadTable() {
               rowsPerPage={rowsPerPage}
               page={page}
               onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
+              onChangeRowsPerPage={handleChangeRowsPerPage} className="pagination"
             />
-            <input type="text" placeholder="search payments...." />
+            <div className="tableLookUp">
+            <div className="search"><img src={"./assets/icons/search.svg"} alt="search icon" style={{width:15}}/> <input type="text" placeholder="Search Payments...." /></div>
 
-            <select name="SelectPayment" onChange={HandleTableData}>
+            <label htmlFor="SelectPayment">Show: { } </label> <select name="SelectPayment" id="SelectPayment" onChange={HandleTableData}>
               <option value="all">All</option>
               <option value="Pending">Pending</option>
               <option value="Reconciled">Reconciled</option>
@@ -145,7 +148,8 @@ export default function StickyHeadTable() {
               <option value="Settled">Settled</option>
               <option value="unSettled">unSettled</option>
             </select>
-
+            </div>
+            </div>
             <TableRow>
               {columns.map(column => (
                 <TableCell
