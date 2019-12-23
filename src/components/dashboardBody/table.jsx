@@ -109,7 +109,7 @@ export default function StickyHeadTable() {
     setPage(0);
   };
 
-  const HandleTableData = e => {
+  const HandleSelectTableData = e => {
     const value = e.target.value;
     if (value === "all") {
       setTableData(TableData.Payments);
@@ -120,16 +120,21 @@ export default function StickyHeadTable() {
     });
     setTableData(filterData);
   };
+  const HandleSearchTableData = e => {
+    const value = e.target.value;
+    const filterData = TableData.Payments.filter(data => {
+      return data.status.includes(value);
+    });
+    setTableData(filterData);
+  };
 
   useEffect(() => {}, [tableData]);
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="table">
-          <TableHead>
-            <div className="headTable">
+      <div className="headTable">
             <TablePagination
-              rowsPerPageOptions={[10, 25, 100]}
+              rowsPerPageOptions={[5,10, 25, 50, 100]}
               component="div"
               count={rows.length}
               rowsPerPage={rowsPerPage}
@@ -138,9 +143,9 @@ export default function StickyHeadTable() {
               onChangeRowsPerPage={handleChangeRowsPerPage} className="pagination"
             />
             <div className="tableLookUp">
-            <div className="search"><img src={"./assets/icons/search.svg"} alt="search icon" style={{width:15}}/> <input type="text" placeholder="Search Payments...." /></div>
+            <div className="search"><img src={"./assets/icons/search.svg"} alt="search icon" style={{width:15}}/> <input type="text" placeholder="Search Payments...." onChange={HandleSearchTableData}/></div>
 
-            <label htmlFor="SelectPayment">Show: { } </label> <select name="SelectPayment" id="SelectPayment" onChange={HandleTableData}>
+            <label htmlFor="SelectPayment">Show: { } </label> <select name="SelectPayment" id="SelectPayment" onChange={HandleSelectTableData}>
               <option value="all">All</option>
               <option value="Pending">Pending</option>
               <option value="Reconciled">Reconciled</option>
@@ -150,6 +155,8 @@ export default function StickyHeadTable() {
             </select>
             </div>
             </div>
+        <Table stickyHeader aria-label="table">
+          <TableHead>
             <TableRow>
               {columns.map(column => (
                 <TableCell
