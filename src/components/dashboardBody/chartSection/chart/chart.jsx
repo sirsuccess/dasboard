@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ChartData from "../../../../commons/chartData";
 
 // Import fusioncharts.js files from fusioncharts module
 import FusionCharts from "fusioncharts";
@@ -9,6 +8,11 @@ import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 // import ReactFC from 'react-fusioncharts';
 import ReactFC from "react-fusioncharts";
 
+import ChartData from "../../../../commons/chartData";
+import Date from "../../../../commons/date";
+
+import "./chart.css"
+
 // Add core FusionCharts module and TimeSeries module as dependecies in react-fusioncharts
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
@@ -16,19 +20,7 @@ ReactFC.fcRoot(FusionCharts, TimeSeries);
 // This is the remote url to fetch the data.
 const dataFetch = ChartData;
  
- let today = new Date();
-        let dd = today.getDate();
-        let mm = today.getMonth() + 1; //January is 0!
-        console.log(mm);
-        
-        const yyyy = today.getFullYear();
-        if (dd < 10) {
-          dd = "0" + dd;
-        }
-        if (mm < 10) {
-          mm = "0" + mm;
-        }
-        today = dd + "-" + mm + "-" + yyyy;
+ 
  
 // This is the remote url to fetch the schema.
 const schemaFetch = [
@@ -94,7 +86,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="App">
-        Today: {today}
+        <div className="date">Today:{" "} <Date/> </div>
         <ReactFC {...this.state.timeseriesDs} />
       </div>
     );
