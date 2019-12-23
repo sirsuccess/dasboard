@@ -4,6 +4,7 @@
     padding-top: 0.5em;
     background-color: #fff;
     position: fixed;
+    /* bottom: 90px; */
 }
 
 .menuItem {
@@ -11,10 +12,10 @@
     /* margin: 1em 0; */
     margin-top: 2em;
     margin-bottom: 1em;
-    padding-left: 3em;
+    /* padding-left: 3em; */
 }
-
-li {
+ 
+.sidebarLI{
     padding: 0.2em 0;
     display: flex;
     align-items: center;
@@ -22,9 +23,9 @@ li {
     text-decoration: none;
     /* margin-bottom: 1em; */
     text-decoration: none;
-    padding-left: 4em;
+    /* padding-left: 4em; */
     font-size: 12px;
-    
+    cursor: pointer;
 }
 
 .active {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Table from "@material-ui/core/Table";
@@ -10,6 +10,7 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 import TableData from "../../commons/transactionData";
 import Button from "../../commons/buttons";
+import "./table.css"
 
 const columns = [
   { id: "item", label: "Item Type", minWidth: 70 },
@@ -52,7 +53,7 @@ const columns = [
 function createData(item, price, transactionNo, time, status, dropdown) {
   return { item, price, transactionNo, time, status, dropdown };
 }
-const blackCircle = ""
+const blackCircle = "";
 const dropdownArr = (
   <img
     src="./assets/icons/arrow-down.svg"
@@ -61,28 +62,6 @@ const dropdownArr = (
     style={{ width: 20 }}
   ></img>
 );
-
-/**   
- * handles table data in table row
- */
-const rows = TableData.Payments.map((dataItem, idex) => {
-  let color;
-  if (dataItem.status === "Pending") {
-    color = "#EBC315";
-  } else if (dataItem.status === "Reconciled") {
-    color = "#27AE60";
-  } else {
-    color = "#C4C4C4";
-  }
-  return createData(
-    `${blackCircle} ${dataItem.item}`,
-    dataItem.price,
-    dataItem.transactionNo,
-    dataItem.time,
-    <Button color={color} title={dataItem.status} />,
-    dropdownArr
-  );
-});
 
 const useStyles = makeStyles({
   root: {
@@ -95,8 +74,31 @@ const useStyles = makeStyles({
 
 export default function StickyHeadTable() {
   const classes = useStyles();
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [tableData, setTableData] = useState(TableData.Payments);
+
+  /**
+   * handles table data in table row
+   */
+  const rows = tableData.map((dataItem, idex) => {
+    let color;
+    if (dataItem.status === "Pending") {
+      color = "#EBC315";
+    } else if (dataItem.status === "Reconciled") {
+      color = "#27AE60";
+    } else {
+      color = "#C4C4C4";
+    }
+    return createData(
+      `${blackCircle} ${dataItem.item}`,
+      dataItem.price,
+      dataItem.transactionNo,
+      dataItem.time,
+      <Button color={color} title={dataItem.status} />,
+      dropdownArr
+    );
+  });
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -107,20 +109,54 @@ export default function StickyHeadTable() {
     setPage(0);
   };
 
+  const HandleSelectTableData = e => {
+    const value = e.target.value;
+    if (value === "all") {
+      setTableData(TableData.Payments);
+      return;
+    }
+    const filterData = TableData.Payments.filter(data => {
+      return data.status === value;
+    });
+    setTableData(filterData);
+  };
+  const HandleSearchTableData = e => {
+    const value = e.target.value;
+    const filterData = TableData.Payments.filter(data => {
+      return data.status.includes(value);
+    });
+    setTableData(filterData);
+  };
+
+  useEffect(() => {}, [tableData]);
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="table">
-          <TableHead>
+      <div className="headTable">
             <TablePagination
-              rowsPerPageOptions={[10, 25, 100]}
+              rowsPerPageOptions={[5,10, 25, 50, 100]}
               component="div"
               count={rows.length}
               rowsPerPage={rowsPerPage}
               page={page}
               onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
+              onChangeRowsPerPage={handleChangeRowsPerPage} className="pagination"
             />
+            <div className="tableLookUp">
+            <div className="search"><img src={"./assets/icons/search.svg"} alt="search icon" style={{width:15}}/> <input type="text" placeholder="Search Payments...." onChange={HandleSearchTableData}/></div>
+
+            <label htmlFor="SelectPayment">Show: { } </label> <select name="SelectPayment" id="SelectPayment" onChange={HandleSelectTableData}>
+              <option value="all">All</option>
+              <option value="Pending">Pending</option>
+              <option value="Reconciled">Reconciled</option>
+              <option value="un-reconciled">Un-reconciled</option>
+              <option value="Settled">Settled</option>
+              <option value="unSettled">unSettled</option>
+            </select>
+            </div>
+            </div>
+        <Table stickyHeader aria-label="table">
+          <TableHead>
             <TableRow>
               {columns.map(column => (
                 <TableCell

@@ -1,0 +1,31 @@
+.headTable,
+.tableLookUp,
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tableLookUp {
+    width: 50%;
+    margin-left: 15%;
+}
+
+.search {
+    justify-content: unset;
+    border: none;
+    border-bottom: 1px solid rgb(88, 88, 88);
+    margin-right: 5em;
+
+}
+
+.pagination {
+    width: 600px;
+    margin-left: 2em;
+    overflow: hidden;
+}
+
+section {
+    border: none;
+    outline: none;
+}

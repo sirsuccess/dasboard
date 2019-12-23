@@ -15,7 +15,7 @@ function Sidebar() {
           className={item.title === "OverView" ? "active" : ""}
         >
           {" "}
-          <li>
+          <li className="sidebarLI">
             <img
               src={item.icon}
               alt="icon"

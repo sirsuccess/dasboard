@@ -4,16 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Segoe UI;
     font-size: 14px;
-    padding: 0.5em 4em;
-    z-index: 5;
+    padding: 1.6em 4em;
     z-index: 8;
     width: 100%;
-    box-sizing: border-box;
     position: fixed;
     top: 0;
-    
 }
 
 Link{

@@ -1,30 +1,46 @@
-
-
-.dashboardBody{
-  display: flex;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI;
+  /* border: 1px solid black; */
+}
+.App {
+  width: 100%;
 }
 
-.dashboadLeft{
+.dashboardBody {
+  display: flex;
+  width: 100%;
+}
+
+.dashboadLeft {
   width: 20%;
 }
-.dashboadRight{
+
+.dashboadRight {
   width: 80%;
   background-color: rgb(240, 242, 247);
 }
 
-ul{
-  list-style:none;
+ul {
+  list-style: none;
 }
-.blackCircle{
+
+.blackCircle {
   background-color: black;
   border-radius: 50%;
 }
-body{
+
+body {
   background-color: rgb(240, 242, 247)
+}
+input{
+  outline: none;
 }
 
 @media screen and (max-width: 750px) {
-  .dashboardBody{
+  .dashboardBody {
     position: relative;
     top: 50px;
     /* background-color: black; */

@@ -21,13 +21,13 @@
         flex-direction: column;
     }
     .chart2{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 2em;
     }
     .progress{
         margin-top: 3em;
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
     }
 }

@@ -99,11 +99,11 @@ function NavRight() {
 export default NavRight;
 
 const Side = styled.div`
-  // display: none;
   @media screen and (max-width: 750px) {
     position: fixed;
-    left: -280px;
+    left: -250px;
     display: block;
+    background-color: #000;
   }
 `;
 const Handburger = styled.div`
@@ -120,7 +120,6 @@ const Handburger = styled.div`
   }
   .line1 {
     transform: rotate(45deg);
-    top: 4%;
     position: absolute;
     background-color: #000;
   }
@@ -129,7 +128,6 @@ const Handburger = styled.div`
   }
   .line3 {
     transform: rotate(-45deg);
-    top: 4%;
     position: absolute;
     background-color: #000;
   }
@@ -144,6 +142,5 @@ const Line = styled.div`
   .line-color {
     background-color: black;
     transform: translateX(45);
-    background-color: #000;
   }
 `;

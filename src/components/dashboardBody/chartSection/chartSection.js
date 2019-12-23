@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressCard from "./progressCard/progressCard"
-import Chart from "./chartSection/chart"
+import Chart from "./chart/chart"
 import './chartSection.css';
 
 
