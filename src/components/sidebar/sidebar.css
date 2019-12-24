@@ -4,37 +4,43 @@
     padding-top: 0.5em;
     background-color: #fff;
     position: fixed;
-    /* bottom: 90px; */
+    height: 100vh;
+    text-decoration: none;
 }
 
 .menuItem {
     text-align: left;
-    /* margin: 1em 0; */
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 1em;
-    /* padding-left: 3em; */
+    padding-left: 2em;
+    font-family: Segoe UI;
+    font-size: 11px;
 }
  
 .sidebarLI{
-    padding: 0.2em 0;
+    text-decoration: none;
+    padding: 0.6em 0;
     display: flex;
     align-items: center;
     color: #647787;
     text-decoration: none;
-    /* margin-bottom: 1em; */
     text-decoration: none;
-    /* padding-left: 4em; */
-    font-size: 12px;
+    font-size: 11px;
     cursor: pointer;
+    font-family: Segoe UI;
+    padding-left: 2em;
+    padding-right: 5em;
 }
-
-.active {
+.sidebarLI:hover{
+    background: rgb(175, 205, 243);
+    border-left: 2px solid #1875F0;
+}
+/* .active {
     color: #0000;
     text-decoration: none;
-    background-color: rgb(203, 224, 250);
-    /* border-left: 4px solid #1875F0; */
-    /* opacity: 0.1; */
-}
+    background: rgb(175, 205, 243);
+    border-left: 2px solid #1875F0;
+} */
 
 @media screen and (max-width: 750px) {
     .sidebar{

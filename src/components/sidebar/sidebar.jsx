@@ -12,14 +12,14 @@ function Sidebar() {
         <NavLink
           to={item.link}
           key={index}
-          className={item.title === "OverView" ? "active" : ""}
+          className={item.title === "OverView" ? "active" : ""} style={{ textDecoration: 'none' }}
         >
           {" "}
           <li className="sidebarLI">
             <img
               src={item.icon}
               alt="icon"
-              style={{ width: 25, marginRight: "2em" }}
+              style={{ width: 20, marginRight: "2em" }}
             />
             {item.title}
           </li>

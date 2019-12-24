@@ -9,8 +9,11 @@
     text-align: center;
     letter-spacing: 0.2px;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
+    margin-left: 2em;
+    margin-top: 2em;
+    outline: none;
 }
 
 @media screen and (max-width: 750px) {

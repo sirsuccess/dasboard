@@ -47,18 +47,16 @@ const Container = styled.div`
     left: 0;
     z-index: 0.5;
     position: absolute;
-
   }
 `;
 const ContentArea = styled.div`
   width: 100%;
   height: 100%;
-  margin-top:4.5em;
+  margin-top: 4.5em;
   position: relative;
   @media screen and (max-width: 750px) {
-    margin-top:1.5em;
+    margin-top: 1.5em;
     padding: 1em;
-    
   }
 
   .top {
@@ -68,11 +66,7 @@ const ContentArea = styled.div`
 
 const Side = styled.div`
   width: 270px;
-  color: #ffffff;
-  padding: 2em;
-  
-  background-color: #fff;
-  z-index: -9;
+  z-index: 2;
   @media screen and (max-width: 750px) {
   background-color: #fff;
     position: fixed;
@@ -89,7 +83,7 @@ const Handburger = styled.div`
   display: flex;
   flex-direction: column;
   width: 30px;
-  height:100%;
+  height: 100%;
   background-color: #fff;
   position: fixed;
   @media screen and (min-width: 751px) {

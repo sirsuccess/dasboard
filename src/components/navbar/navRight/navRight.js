@@ -19,13 +19,13 @@ function NavRight() {
   return (
     <>
       <ul className="normalHandburgger">
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <li>Support</li>
         </Link>
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <li>FAQ</li>
         </Link>
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <li>
             <img
               src={"./assets/icons/bell.svg"}
@@ -36,7 +36,7 @@ function NavRight() {
             <div className="dot">8</div>
           </li>
         </Link>
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <li className="profileLI">
             <div className="profileName">
               <div className="hello">Hello </div>
@@ -54,13 +54,13 @@ function NavRight() {
       <div className="handburger" onClick={handleclose}>
         <Side className={open ? "open" : ""}>
           <ul className={open ? "open" : ""}>
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <li>Support</li>
             </Link>
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <li>FAQ</li>
             </Link>
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <li>
                 <img
                   src={"./assets/icons/bell.svg"}
@@ -71,7 +71,7 @@ function NavRight() {
                 <div className="dot">8</div>
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <li className="profileLI">
                 <div className="profileName">
                   <div className="hello">Hello </div>

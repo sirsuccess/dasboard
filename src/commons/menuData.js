@@ -3,53 +3,53 @@ export default {
     {
       title: "OverView",
       link: "/",
-      icon: "./assets/icons/dashboard.svg"
+      icon: "./assets/icons/Dashboard.svg"
     }
   ],
   Payments: [
     {
       title: "All payments",
       link: "/",
-      icon: "./assets/icons/wallet.svg"
+      icon: "./assets/icons/payment.svg"
     },
     {
       title: "Reconciled Payments",
       link: "/",
-      icon: "./assets/icons/wallet.svg"
+      icon: "./assets/icons/reconciled.svg"
     },
     {
       title: "Unreconciled payments",
       link: "/",
-      icon: "./assets/icons/wallet.svg"
+      icon: "./assets/icons/unreconciled.svg"
     },
     {
       title: "Manual Setlement",
       link: "/",
-      icon: "./assets/icons/wallet.svg"
+      icon: "./assets/icons/manual.svg"
     }
   ],
   Orders: [
     {
       title: "All Orders",
       link: "/",
-      icon: "./assets/icons/note.svg"
+      icon: "./assets/icons/allOrder.svg"
     },
     {
       title: "Pending Orders",
       link: "/",
-      icon: "./assets/icons/note.svg"
+      icon: "./assets/icons/pending.svg"
     },
     {
       title: "Reconciled Orders",
       link: "/",
-      icon: "./assets/icons/note.svg"
+      icon: "./assets/icons/orderAproved.svg"
     }
   ],
   Profile: [
     {
       title: "Marchant Profile",
       link: "/",
-      icon: "./assets/icons/user.svg"
+      icon: "./assets/icons/avatar.svg"
     }
   ]
 };
