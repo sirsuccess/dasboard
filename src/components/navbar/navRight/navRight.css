@@ -14,7 +14,8 @@
 .profileName {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
     text-decoration: none;
 }
 
@@ -22,6 +23,9 @@
     border-radius: 50%;
 }
 
+link{
+    text-decoration: none;
+}
 
 .Bell {
     position: absolute;
@@ -51,10 +55,10 @@ li {
     align-items: center;
     color: #647787;
     text-decoration: none;
-    /* margin-bottom: 1em; */
+    font-family: Segoe UI;
     text-decoration: none;
     padding-left: 4em;
-    font-size: 12px;
+    font-size: 14px;
     
 }
 .handburger li {
