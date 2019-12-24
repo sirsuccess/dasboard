@@ -56,7 +56,7 @@ function createData(item, price, transactionNo, time, status, dropdown) {
 const blackCircle = "";
 const dropdownArr = (
   <img
-    src="./assets/icons/arrow-down.svg"
+    src="./assets/icons/arrow.svg"
     alt="Bell icon"
     className="dropdownArr"
     style={{ width: 20 }}
