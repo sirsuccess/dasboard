@@ -8,7 +8,7 @@ import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 // import ReactFC from 'react-fusioncharts';
 import ReactFC from "react-fusioncharts";
 
-import ChartData from "../../../../commons/chartData";
+import ChartData from "../../../../data/chartData";
 import Date from "../../../../commons/date";
 
 import "./chart.css"
@@ -45,12 +45,18 @@ class Chart extends Component {
         type: "timeseries",
         renderAt: "container",
         width: "100%",
-        height: "350",
+        height: "250",
         backgroundColor: "red",
+        bgColor: "#165952",
         dataSource: {
           //   caption: { text: 'Online Sales of a SuperStore in the US' },
           // Initially data is set as null
-          data: null
+          chart: {
+            showlegend: 0,
+            // palettecolors: "#165952",
+            // palettecolors: "#165952",
+            bgColor: "#165952"
+          },
         }
       }
     };

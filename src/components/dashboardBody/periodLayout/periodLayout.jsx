@@ -1,5 +1,5 @@
 import React from "react";
-import periodData from "../../../commons/periodData";
+import periodData from "../../../data/periodData";
 
 import "./periodLayout.css";
 
