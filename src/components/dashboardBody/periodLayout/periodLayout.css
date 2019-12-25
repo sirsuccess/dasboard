@@ -1,11 +1,12 @@
-.periodFlex{
+.periodFlex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 1.5em;
     margin-bottom: 1em;
 }
-.period{
+
+.period {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -14,14 +15,24 @@
     padding: 1em;
     font-size: 13px;
     margin-bottom: 1em;
+    border: 1px solid #EEF8FD;
+    border-radius: 2px;
+    color: #787C90
 }
-.value{
-    font-weight: 800;
-    font-size: 16px;
+
+.currency {
+    text-decoration: line-through;
+    color: #262626;
+}
+
+.value {
+    font-weight: 500;
+    font-size: 18px;
+    color: #262626;
 }
 
 @media screen and (max-width: 750px) {
-    .period{
+    .period {
         width: 80%;
     }
 }
