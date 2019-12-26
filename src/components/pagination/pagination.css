@@ -1,0 +1,31 @@
+.page-item{
+    display: flex;
+    
+}
+
+.page-number{
+    display: flex;
+    background-color:#1875F0;;
+    cursor: pointer;
+    padding: 1em;
+    border: 1px solid #CED0DA;
+    color: #fff;
+}
+
+.pagination {
+    display: flex;
+    align-items: flex-end;
+    width: 600px;
+    justify-content: unset;
+    margin-left: 1em;
+    overflow: hidden;
+    border: 1px solid #CED0DA;
+}
+.tableNext{
+    color: #000000;
+    padding: 0.5px;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid #CED0DA;
+}
+
