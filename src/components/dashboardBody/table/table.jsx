@@ -8,12 +8,14 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
-import TableData from "../../commons/transactionData";
-import Button from "../../commons/buttons";
-import "./table.css"
+import TableData from "../../../data/transactionData";
+import Button from "../../../commons/buttons";
+import Circle from "../../../commons/circle";
+import "./table.css";
 
 const columns = [
-  { id: "item", label: "Item Type", minWidth: 70 },
+  { id: "circle", label: "Item Type" },
+  { id: "item", label: "" },
   {
     id: "price",
     label: "Price",
@@ -50,10 +52,18 @@ const columns = [
   }
 ];
 
-function createData(item, price, transactionNo, time, status, dropdown) {
-  return { item, price, transactionNo, time, status, dropdown };
+function createData(
+  circle,
+  item,
+  price,
+  transactionNo,
+  time,
+  status,
+  dropdown
+) {
+  return { circle, item, price, transactionNo, time, status, dropdown };
 }
-const blackCircle = "";
+
 const dropdownArr = (
   <img
     src="./assets/icons/arrow.svg"
@@ -91,7 +101,10 @@ export default function StickyHeadTable() {
       color = "#C4C4C4";
     }
     return createData(
-      `${blackCircle} ${dataItem.item}`,
+      <Circle
+        circleProps={{ bgColor: "#7F8FA4", text: "VW", width: "30px", fontSize:"12px" }}
+      />,
+      dataItem.item,
       dataItem.price,
       dataItem.transactionNo,
       dataItem.time,
@@ -132,20 +145,36 @@ export default function StickyHeadTable() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-      <div className="headTable">
-            <TablePagination
-              rowsPerPageOptions={[5,10, 25, 50, 100]}
-              component="div"
-              count={rows.length}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage} className="pagination"
-            />
-            <div className="tableLookUp">
-            <div className="search"><img src={"./assets/icons/search.svg"} alt="search icon" style={{width:15}}/> <input type="text" placeholder="Search Payments...." onChange={HandleSearchTableData}/></div>
-
-            <label htmlFor="SelectPayment">Show: { } </label> <select name="SelectPayment" id="SelectPayment" onChange={HandleSelectTableData}>
+        <div className="headTable">
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25, 50, 100]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+            className="pagination"
+          />
+          <div className="tableLookUp">
+            <div className="searchTable">
+              <img
+                src={"./assets/icons/search.svg"}
+                alt="search icon"
+                style={{ width: 15 }}
+              />{" "}
+              <input
+                type="text"
+                placeholder="Search Payments...."
+                onChange={HandleSearchTableData}
+              />
+            </div>
+            <label htmlFor="SelectPayment">Show: {} </label>{" "}
+            <select
+              name="SelectPayment"
+              id="SelectPayment"
+              onChange={HandleSelectTableData}
+            >
               <option value="all">All</option>
               <option value="Pending">Pending</option>
               <option value="Reconciled">Reconciled</option>
@@ -153,8 +182,8 @@ export default function StickyHeadTable() {
               <option value="Settled">Settled</option>
               <option value="unSettled">unSettled</option>
             </select>
-            </div>
-            </div>
+          </div>
+        </div>
         <Table stickyHeader aria-label="table">
           <TableHead>
             <TableRow>
@@ -192,7 +221,7 @@ export default function StickyHeadTable() {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5,10, 25, 100]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
