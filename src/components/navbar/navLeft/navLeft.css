@@ -1,34 +1,39 @@
-.navLeft{
-display: flex;
-align-items: flex-end;
+.navLeft {
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
 }
-.brand{
+
+.brand {
     color: #1875F0;
     font-weight: 900;
-font-size: 24px;
+    font-size: 24px;
 
 }
-.navLeft img{
+
+.navLeft img {
     margin-left: 30%;
 }
-input{
+
+input {
     border: none;
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-top: 0.5em;
-    
+
     margin-right: 5%;
-    
+
 }
 
 @media screen and (max-width: 750px) {
-    .brand{
-        
-    font-size: 22px;
-    
+    .brand {
+
+        font-size: 22px;
+
     }
-    input{
-       width: 100px;
-       padding-left: 0;
+
+    input {
+        width: 100px;
+        padding-left: 0;
     }
 }

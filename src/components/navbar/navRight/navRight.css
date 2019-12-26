@@ -32,15 +32,10 @@ link{
 }
 
 .dot {
-    background-color: #1875F0;
+    
     position: relative;
-    top: -5px;
+    top: -8px;
     right: -10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 10px;
     font-weight: 800;
     text-align: center;
 }
