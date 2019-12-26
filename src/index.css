@@ -6,7 +6,9 @@
   /* border: 1px solid black; */
   color: #787C90;
 }
-
+*:focus {
+  outline: none;
+}
 body {
   background-color: rgb(240, 242, 247)
 }
