@@ -15,7 +15,7 @@
 
 .dashboadRight {
   width: 100%;
-  background-color: rgb(240, 242, 247);
+  background-color: #E5E5E5;
 }
 
 ul {
@@ -30,7 +30,11 @@ ul {
 input{
   outline: none;
 }
-
+.circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 750px) {
   .dashboardBody {
     position: relative;
