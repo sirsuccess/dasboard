@@ -1,4 +1,5 @@
 import React from "react";
+import Circle from "./circle";
 
 function Button({ color, title }) {
   return (
@@ -6,16 +7,14 @@ function Button({ color, title }) {
       className="btnDot"
       style={{ backgroundColor: "transperant", color: color }}
     >
-      <div
-        className="dot"
-        style={{
-          backgroundColor: color,
+      <Circle
+        circleProps={{
+          bgColor: color,
+          text: "",
           width: "10px",
-          height: "10px",
-          top: "2px",
-          right: "-2px"
+          fontSize: "12px"
         }}
-      ></div>
+      />
       {title}
     </button>
   );
