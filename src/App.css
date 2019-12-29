@@ -42,3 +42,7 @@ input{
     /* background-color: black; */
   }
 }
+
+#raphael-paper-2 > g.raphael-group-3-parentgroup > g.raphael-group-8-chart-exo > g.raphael-group-103-timenav-exo > g.raphael-group-127-brush-group{
+  display: none;
+}
