@@ -9,13 +9,9 @@ function Sidebar() {
   const MapData = data => {
     return data.map((item, index) => {
       return (
-        <NavLink
-          to={item.link}
-          key={index}
-          className={item.title === "OverView" ? "active" : ""} style={{ textDecoration: 'none' }}
-        >
+        <NavLink to={item.link} key={index} style={{ textDecoration: "none" }}>
           {" "}
-          <li className="sidebarLI">
+          <li className={item.title === "OverView" ? "ative" : "sidebarLI"}>
             <img
               src={item.icon}
               alt="icon"

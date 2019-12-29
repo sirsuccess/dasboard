@@ -16,8 +16,8 @@
     font-family: Segoe UI;
     font-size: 11px;
 }
- 
-.sidebarLI{
+
+.sidebarLI,.ative {
     text-decoration: none;
     padding: 0.6em 0;
     display: flex;
@@ -31,22 +31,23 @@
     padding-left: 2em;
     padding-right: 5em;
 }
-.sidebarLI:hover{
+
+.sidebarLI:hover {
     background: rgb(175, 205, 243);
-    border-left: 2px solid #1875F0;
+    border-left: 4px solid #1875F0;
 }
-/* .active {
-    color: #0000;
-    text-decoration: none;
+
+.ative {
     background: rgb(175, 205, 243);
-    border-left: 2px solid #1875F0;
-} */
+    border-left: 4px solid #1875F0;
+    padding-left: 2em;
+}
 
 @media screen and (max-width: 750px) {
-    .sidebar{
+    .sidebar {
         padding-top: 30px;
         padding-left: 50px;
         padding-right: 1em;
-        top:5em;
+        top: 5em;
     }
 }
