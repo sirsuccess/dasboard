@@ -1,0 +1,125 @@
+.headTable,
+.tableLookUp,
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tableLookUp {
+    width: 50%;
+    margin-left: 15%;
+}
+
+.searchTable {
+    display: flex;
+    padding-bottom: 0.2em;
+    border: none;
+    border-bottom: 0.5px solid #787878;
+    margin-right: 5em;
+    margin-left: 10em;
+}
+
+
+
+section {
+    border: none;
+    outline: none;
+}
+
+
+
+
+.tableBig {
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px rgba(255, 255, 255, 0.07);
+    margin-bottom: 5em;
+    border-radius: 5px;
+
+}
+
+.tableUL {
+    overflow: scroll;
+    max-height: 400px;
+}
+
+.tableLi,
+.tableHead {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #CCCFD4;
+    width: 100%;
+    padding: 1em 0;
+    background-color: #fff;
+
+}
+
+.tableLi:hover {
+    background-color: rgb(243, 243, 245);
+}
+
+.tableHead {
+    background: #EAEEF0;
+    color: #7F8FA4;
+    ;
+}
+
+.tableLookUp1 {
+    display: flex;
+    margin-left: 1em;
+    /* justify-content: flex-start;
+    align-items: flex-end; */
+    background-color: #E5E5E5;
+    margin-bottom: 1em;
+    width: 80%;
+
+}
+
+.circleDiv {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SelectPayment {
+    background-color: #E5E5E5;
+    border: none;
+    outline: none;
+    border: none !important;
+    background-color: transparent !important;
+
+
+
+}
+
+
+option {
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    .tableLookUp1 {
+        width: 100%;
+        margin-left: 0em;
+        padding-left: 2em;
+
+        margin-bottom: 1em;
+        flex-direction: column;
+    }
+
+    .searchTable {
+        display: flex;
+        padding-bottom: 0.2em;
+        border: none;
+        border-bottom: 0.5px solid #787878;
+        margin: 1em;
+    }
+
+    .searchTable input {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}

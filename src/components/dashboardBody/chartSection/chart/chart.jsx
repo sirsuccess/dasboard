@@ -8,20 +8,17 @@ import TimeSeries from "fusioncharts/fusioncharts.timeseries";
 // import ReactFC from 'react-fusioncharts';
 import ReactFC from "react-fusioncharts";
 
-import ChartData from "../../../../commons/chartData";
+import ChartData from "../../../../data/chartData";
 import Date from "../../../../commons/date";
 
-import "./chart.css"
+import "./chart.css";
 
 // Add core FusionCharts module and TimeSeries module as dependecies in react-fusioncharts
 ReactFC.fcRoot(FusionCharts, TimeSeries);
 
-
 // This is the remote url to fetch the data.
 const dataFetch = ChartData;
- 
- 
- 
+
 // This is the remote url to fetch the schema.
 const schemaFetch = [
   {
@@ -35,7 +32,6 @@ const schemaFetch = [
   }
 ];
 
-
 class Chart extends Component {
   constructor(props) {
     super(props);
@@ -45,12 +41,22 @@ class Chart extends Component {
         type: "timeseries",
         renderAt: "container",
         width: "100%",
-        height: "350",
-        backgroundColor: "red",
+        height: "250",
+        // usePlotGradientColor: "1",
+        // plotGradientColor: "#ffffff",
+        
         dataSource: {
           //   caption: { text: 'Online Sales of a SuperStore in the US' },
           // Initially data is set as null
-          data: null
+          chart: {
+            showlegend: 0,
+            // palettecolors: "#165952",
+            usePlotGradientColor: "1",
+            plotGradientColor: "#ffffff"
+            // palettecolors: "#165952",
+            // bgColor: "#165952",
+            // palettecolors: "5d62b5,29c3be,f2726f"
+          }
         }
       }
     };
@@ -86,7 +92,9 @@ class Chart extends Component {
   render() {
     return (
       <div className="App">
-        <div className="date">Today:{" "} <Date/> </div>
+        <div className="date">
+          Today: <Date />{" "}
+        </div>
         <ReactFC {...this.state.timeseriesDs} />
       </div>
     );

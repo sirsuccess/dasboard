@@ -1,5 +1,5 @@
 import React from "react";
-import periodData from "../../../commons/periodData";
+import periodData from "../../../data/periodData";
 
 import "./periodLayout.css";
 
@@ -10,7 +10,7 @@ function PeriodLayout() {
         <div className="period" key={index}>
           <div className="periodLeft">
             <p className="title">{item.title}</p>
-            <p className="value">{item.value}</p>
+      <p className="value">{item.currency?<span className="currency">N</span>:""}{item.value}</p>
           </div>
           <div className="chart"></div>
           <img

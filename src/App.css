@@ -1,10 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Segoe UI;
-  /* border: 1px solid black; */
-}
+
 .App {
   width: 100%;
 }
@@ -21,7 +15,7 @@
 
 .dashboadRight {
   width: 100%;
-  background-color: rgb(240, 242, 247);
+  background-color: #E5E5E5;
 }
 
 ul {
@@ -33,17 +27,22 @@ ul {
   border-radius: 50%;
 }
 
-body {
-  background-color: rgb(240, 242, 247)
-}
 input{
   outline: none;
 }
-
+.circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 750px) {
   .dashboardBody {
     position: relative;
     top: 50px;
     /* background-color: black; */
   }
+}
+
+#raphael-paper-2 > g.raphael-group-3-parentgroup > g.raphael-group-8-chart-exo > g.raphael-group-103-timenav-exo > g.raphael-group-127-brush-group{
+  display: none;
 }

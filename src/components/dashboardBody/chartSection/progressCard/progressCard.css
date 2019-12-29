@@ -6,13 +6,16 @@
 .cardLayout {
     background-color: #fff;
     width: 100%;
-    /* height: 140px; */
     padding: 1em 2em;
     box-sizing: border-box;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 400;
+    border-radius: 2px;
 }
 
 .cardLayout:first-child {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .cardTitle {

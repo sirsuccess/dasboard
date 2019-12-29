@@ -1,0 +1,53 @@
+.page-item {
+    display: flex;
+
+}
+
+.page-number {
+    display: flex;
+    background-color: #1875F0;
+    ;
+    cursor: pointer;
+    padding: 1em;
+    border: 1px solid #CED0DA;
+    color: #fff;
+}
+
+.pagination {
+    display: flex;
+    align-items: flex-end;
+    width: 600px;
+    justify-content: unset;
+    margin-left: 1em;
+    overflow: hidden;
+    border: 1px solid #CED0DA;
+}
+
+.tableNext {
+    color: #000000;
+    padding: 0.5px;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid #CED0DA;
+}
+
+.paginate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+@media screen and (max-width: 750px) {
+    .paginate {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+
+    .pagination {
+
+        margin-top: 2em;
+        margin-left: 0em;
+        width: 100%;
+    }
+}

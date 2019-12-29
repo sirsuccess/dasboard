@@ -1,31 +1,36 @@
-.ChartSection{
- display: flex;
- flex-wrap: wrap;
- justify-content: space-evenly;
- margin: 1em 0;
+.ChartSection {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* margin: 1em 0; */
+    margin-left: 2em;
 
 }
 
-.chart2{
+.chart2 {
     background-color: #fff;
-    width: 48%;
+    width: 65%;
+    margin-right: 0.5em;
     /* height: 300px; */
+    border-radius: 2px;
 }
 
-.progress{
-    width: 48%;
+.progress {
+    width: 30%;
 }
 
 @media screen and (max-width: 950px) {
-    .ChartSection{
+    .ChartSection {
         flex-direction: column;
     }
-    .chart2{
+
+    .chart2 {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 2em;
     }
-    .progress{
+
+    .progress {
         margin-top: 3em;
         margin: 0 auto;
         width: 100%;

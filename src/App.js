@@ -19,7 +19,7 @@ function App() {
   };
   return (
     <>
-      <Navbar />
+      <Navbar onClick={handleclose} />
       <Container className="App">
         <ContentArea className="dashboardBody" onClick={handleclose}>
           <Side className={open ? "open" : ""}>

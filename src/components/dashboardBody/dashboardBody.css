@@ -1,9 +1,10 @@
-.tableClass{
+.tableClass {
     width: 95%;
     margin: 0 auto;
     margin-bottom: 3em;
 }
-.btnDot{
+
+.btnDot {
     background-color: transparent;
     border: 1px solid #C4C4C4;
     border-radius: 30px;
@@ -13,4 +14,15 @@
     align-items: center;
     width: 110px;
     cursor: pointer;
+}
+
+.paymentClass {
+    font-size: 36px;
+    margin-left: 0.8em;
+    color:  #262626;
+    margin-bottom: 0.7em;
+    margin-top: 1em;
+    font-family:  Segoe UI
+    
+
 }

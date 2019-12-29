@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Circle from "../../../commons/circle";
 
 import "./navRight.css";
 
@@ -19,13 +20,13 @@ function NavRight() {
   return (
     <>
       <ul className="normalHandburgger">
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li>Support</li>
         </Link>
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li>FAQ</li>
         </Link>
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <img
               src={"./assets/icons/bell.svg"}
@@ -33,10 +34,19 @@ function NavRight() {
               className="Bell"
               style={{ width: 20 }}
             />{" "}
-            <div className="dot">8</div>
+            <span className="dot">
+              <Circle
+                circleProps={{
+                  bgColor: "#1875F0",
+                  text: "8",
+                  width: "15px",
+                  fontSize: "10px"
+                }}
+              />
+            </span>
           </li>
         </Link>
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <li className="profileLI">
             <div className="profileName">
               <div className="hello">Hello </div>
@@ -54,13 +64,13 @@ function NavRight() {
       <div className="handburger" onClick={handleclose}>
         <Side className={open ? "open" : ""}>
           <ul className={open ? "open" : ""}>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <li>Support</li>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <li>FAQ</li>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <li>
                 <img
                   src={"./assets/icons/bell.svg"}
@@ -68,10 +78,19 @@ function NavRight() {
                   className="Bell"
                   style={{ width: 20 }}
                 />{" "}
-                <div className="dot">8</div>
+                <span className="dot">
+                  <Circle
+                    circleProps={{
+                      bgColor: "#1875F0",
+                      text: "8",
+                      width: "15px",
+                      fontSize: "10px"
+                    }}
+                  />
+                </span>
               </li>
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <li className="profileLI">
                 <div className="profileName">
                   <div className="hello">Hello </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import MenuData from "../../commons/menuData";
+import MenuData from "../../data/menuData";
 import { NavLink } from "react-router-dom";
 import Invoice from "./invoice/invoice";
 

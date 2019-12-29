@@ -4,7 +4,7 @@ export default {
       title: "Orders",
       Pending: "Pending Order",
       Reconciled: "Reconciled Orders",
-      PendingValue: 20,
+      PendingValue: 10,
       ReconciledValue: 50,
       Total: "Total Order",
       TotalValue: 100

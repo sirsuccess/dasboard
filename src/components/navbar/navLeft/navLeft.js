@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from "../../../commons/search/search"
 
 import './navLeft.css';
 
@@ -8,8 +9,7 @@ function NavRight() {
       <div className="brand">
         TransMonitor
       </div>
-        <img src={"./assets/icons/search.svg"} alt="search icon" style={{width:20}}/>
-        <input type="tex" placeholder="Search ..."/>
+        <Search placeholder="Search...." />
     </div>
   );
 }
