@@ -75,11 +75,13 @@ function TableCustome() {
           />
           {dataItem.item}
         </div>
-        <div>{dataItem.price}</div>
-        <div>{dataItem.transactionNo}</div>
-        <div>{dataItem.time}</div>
-        <Button color={color} title={dataItem.status} />
-        {dropdownArr}
+        <div className="price">{dataItem.price}</div>
+        <div className="transaction">{dataItem.transactionNo}</div>
+        <div className="time">
+          {dataItem.time}
+          <Button color={color} title={dataItem.status} />
+          {dropdownArr}
+        </div>
       </li>
     );
   });
@@ -134,12 +136,10 @@ function TableCustome() {
       </div>
       <div className="tableBig">
         <div className="tableHead">
-          <div>Item type</div>
-          <div></div>
-          <div>Price</div>
-          <div>Transaction No</div>
-          <div>Time</div>
-          <div></div>
+          <div className="circleDiv">Item type</div>
+          <div className="price">Price</div>
+          <div className="transaction">Transaction No</div>
+          <div className="time">Time</div>
         </div>
         <ul className="tableUL">{rows}</ul>
 

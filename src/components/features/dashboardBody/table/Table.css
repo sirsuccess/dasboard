@@ -48,7 +48,7 @@ section {
 .tableLi,
 .tableHead {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     border-bottom: 1px solid #CCCFD4;
     width: 100%;
     padding: 1em 0;
@@ -78,7 +78,24 @@ section {
 }
 
 .circleDiv {
+    margin-left: 2em;
     width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    width: 150px;
+    margin-left: 5em;
+}
+
+.transaction {
+    width: 150px;
+}
+
+.time {
+    margin-left: 3em;
+    width: 300px;
     display: flex;
     justify-content: space-between;
 }
