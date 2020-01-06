@@ -39,9 +39,9 @@ function TableCustome() {
   const HandleSearchTableData = e => {
     const value = e.target.value;
     const filterData = TableData.Payments.filter(data => {
-      return data.status.includes(value);
+      return setableData(data.status.includes(value));
     });
-    setableData(filterData);
+    // setableData(filterData);
   };
 
   useEffect(() => {}, [tableData]);

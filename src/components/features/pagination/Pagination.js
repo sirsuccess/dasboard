@@ -8,10 +8,13 @@ const Pagination = ({ dataPerPage, totaltableData, paginate, currentPage }) => {
     pageNumbers.push(i);
   }
 
+  const showingNum = dataPerPage * currentPage;
+  const dataShowingPerPage = dataPerPage * currentPage - (dataPerPage - 1);
+
   return (
     <div className="paginate">
       <div>
-        Showing {currentPage} to {totalNumberOfpage} of {totaltableData} entries
+        Showing {dataShowingPerPage} to {showingNum} of {totaltableData} entries
       </div>
       <ul className="pagination">
         <div
